@@ -1,0 +1,119 @@
+// Contoh Program BekaScript
+// Bahasa Pemrograman dengan Flavor Betawi-Bekasi
+
+nongol "=== Selamat Datang di BekaScript! ===";
+
+// Deklarasi variabel dan konstanta
+punya nama = "BekaScript";
+anu umur = 1;
+anu versi = "1.0.0";
+
+nongol "Nama: " + nama;
+nongol "Umur: " + umur + " tahun";
+nongol "Versi: " + versi;
+
+// Contoh kondisi if-else
+nongol "\n=== Test Kondisi ===";
+punya nilaiUjian = 85;
+
+kalo (nilaiUjian >= 90) {
+    nongol "Nilai A - Luar biasa!";
+} yakali (nilaiUjian >= 80) {
+    nongol "Nilai B - Bagus sekali!";
+} yakali (nilaiUjian >= 70) {
+    nongol "Nilai C - Cukup baik";
+} kalo_kaga {
+    nongol "Nilai D - Perlu belajar lebih giat";
+}
+
+// Contoh loop for
+nongol "\n=== Test Loop For ===";
+nongol "Hitung mundur:";
+ulangin i dari 5 ampe 0 {
+    kalo (i > 0) {
+        nongol i + "...";
+    } kalo_kaga {
+        nongol "Start!";
+    }
+}
+
+// Contoh loop while
+nongol "\n=== Test Loop While ===";
+anu counter = 1;
+nongol "Bilangan genap dari 2-10:";
+pokonya (counter <= 5) {
+    nongol counter * 2;
+    counter++;
+}
+
+// Contoh fungsi
+nongol "\n=== Test Fungsi ===";
+
+guna sapa(nama) {
+    nongol "Halo, " + nama + "! Selamat datang di BekaScript!";
+}
+
+guna hitungLuas(panjang, lebar) {
+    punya luas = panjang * lebar;
+    nongol "Luas persegi panjang: " + luas;
+    balik luas;
+}
+
+guna cekGanjilGenap(angka) {
+    kalo (angka % 2 == 0) {
+        nongol angka + " adalah bilangan genap";
+    } kalo_kaga {
+        nongol angka + " adalah bilangan ganjil";
+    }
+}
+
+// Panggil fungsi-fungsi
+sapa("Budi");
+sapa("Siti");
+
+anu hasilLuas = hitungLuas(5, 3);
+nongol "Hasil yang dikembalikan: " + hasilLuas;
+
+cekGanjilGenap(7);
+cekGanjilGenap(12);
+
+// Contoh array sederhana (menggunakan string concatenation)
+nongol "\n=== Test Daftar Nama ===";
+punya nama1 = "Andi";
+punya nama2 = "Budi";
+punya nama3 = "Citra";
+
+nongol "Daftar siswa:";
+nongol "1. " + nama1;
+nongol "2. " + nama2;
+nongol "3. " + nama3;
+
+// Contoh perhitungan matematika
+nongol "\n=== Test Matematika ===";
+punya a = 10;
+punya b = 3;
+
+nongol a + " + " + b + " = " + (a + b);
+nongol a + " - " + b + " = " + (a - b);
+nongol a + " * " + b + " = " + (a * b);
+nongol a + " / " + b + " = " + (a / b);
+
+// Nested conditions
+nongol "\n=== Test Kondisi Bersarang ===";
+punya cuaca = "cerah";
+punya suhu = 28;
+
+kalo (cuaca == "cerah") {
+    kalo (suhu > 30) {
+        nongol "Cuaca cerah tapi panas banget!";
+    } yakali (suhu > 25) {
+        nongol "Cuaca cerah dan hangat, cocok untuk jalan-jalan!";
+    } kalo_kaga {
+        nongol "Cuaca cerah tapi agak dingin";
+    }
+} kalo_kaga {
+    nongol "Cuaca lagi gak bagus nih";
+}
+
+nongol "\n=== Program BekaScript Selesai ===";
+nongol "Terima kasih sudah mencoba BekaScript!";
