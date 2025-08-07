@@ -9,7 +9,6 @@ class BekaScriptInterpreter {
         this.functions = {};
     }
 
-    // Tokenizer sederhana
     tokenize(code) {
         const tokens = [];
         const keywords = [
@@ -111,7 +110,6 @@ class BekaScriptInterpreter {
         return tokens;
     }
 
-    // Parser sederhana
     parse(tokens) {
         let current = 0;
 
@@ -152,6 +150,31 @@ class BekaScriptInterpreter {
 
             if (token.type === 'IDENTIFIER') {
                 const name = consume().value;
+
+                if (peek()?.value === '(') {
+                    consume();
+                    const args = [];
+                    if (peek()?.value !== ')') {
+                        args.push(parseExpression());
+                        while (peek()?.value === ',') {
+                            consume();
+                            args.push(parseExpression());
+                        }
+                    }
+                    consume(); // consume ')'
+
+                    return { type: 'CallExpression', name, arguments: args };
+                }
+
+                if (peek()?.value === '++') {
+                    consume();
+                    return {
+                        type: 'UnaryExpression',
+                        operator: '++',
+                        argument: { type: 'Identifier', name }
+                    };
+                }
+
                 return { type: 'Identifier', name };
             }
 
@@ -170,7 +193,6 @@ class BekaScriptInterpreter {
 
             if (!token) return null;
 
-            // Variable declaration: punya/anu
             if (token.value === 'punya' || token.value === 'anu') {
                 const kind = consume().value;
                 const name = consume().value;
@@ -186,7 +208,6 @@ class BekaScriptInterpreter {
                 };
             }
 
-            // Console output: nongol
             if (token.value === 'nongol') {
                 consume();
                 const expression = parseExpression();
@@ -198,19 +219,18 @@ class BekaScriptInterpreter {
                 };
             }
 
-            // If statement: kalo
             if (token.value === 'kalo') {
                 consume();
-                consume(); // consume '('
+                consume();
                 const condition = parseExpression();
-                consume(); // consume ')'
-                consume(); // consume '{'
+                consume();
+                consume();
 
                 const thenBody = [];
                 while (peek()?.value !== '}') {
                     thenBody.push(parseStatement());
                 }
-                consume(); // consume '}'
+                consume();
 
                 let elseIfs = [];
                 let elseBody = null;
@@ -251,21 +271,20 @@ class BekaScriptInterpreter {
                 };
             }
 
-            // For loop: ulangin
             if (token.value === 'ulangin') {
                 consume();
                 const variable = consume().value;
-                consume(); // consume 'dari'
+                consume();
                 const start = parseExpression();
-                consume(); // consume 'ampe'
+                consume();
                 const end = parseExpression();
-                consume(); // consume '{'
+                consume();
 
                 const body = [];
                 while (peek()?.value !== '}') {
                     body.push(parseStatement());
                 }
-                consume(); // consume '}'
+                consume();
 
                 return {
                     type: 'ForStatement',
@@ -276,7 +295,6 @@ class BekaScriptInterpreter {
                 };
             }
 
-            // While loop: pokonya
             if (token.value === 'pokonya') {
                 consume();
                 consume();
@@ -297,17 +315,17 @@ class BekaScriptInterpreter {
                 };
             }
 
-            // Function declaration: guna
             if (token.value === 'guna') {
                 consume();
                 const name = consume().value;
                 consume();
 
                 const params = [];
-                while (peek()?.value !== ')') {
+                if (peek()?.value !== ')') {
                     params.push(consume().value);
-                    if (peek()?.value === ',') {
+                    while (peek()?.value === ',') {
                         consume();
+                        params.push(consume().value);
                     }
                 }
                 consume();
@@ -327,29 +345,24 @@ class BekaScriptInterpreter {
                 };
             }
 
-            // Assignment, increment, or expression statement
+            if (token.value === 'balik') {
+                consume();
+                const value = parseExpression();
+                consume(); // consume ';'
+                return {
+                    type: 'ReturnStatement',
+                    value
+                };
+            }
+
             if (token.type === 'IDENTIFIER') {
                 const name = consume().value;
+                const nextToken = peek();
 
-                if (peek()?.value === '++') {
-                    consume(); // consume '++'
-                    if (peek()?.value !== ';') {
-                        throw new Error('Expected semicolon after increment operator');
-                    }
-                    consume(); // consume ';'
-
-                    return {
-                        type: 'UnaryExpression',
-                        operator: '++',
-                        argument: { type: 'Identifier', name }
-                    };
-                }
-
-                if (peek()?.value === '=') {
+                if (nextToken?.value === '=') {
                     consume();
                     const value = parseExpression();
                     consume();
-
                     return {
                         type: 'AssignmentStatement',
                         name,
@@ -357,17 +370,33 @@ class BekaScriptInterpreter {
                     };
                 }
 
-                current--;
-                const expression = parseExpression();
-                consume();
+                if (nextToken?.value === '++') {
+                    consume();
+                    consume();
+                    return {
+                        type: 'ExpressionStatement',
+                        expression: {
+                            type: 'UnaryExpression',
+                            operator: '++',
+                            argument: { type: 'Identifier', name }
+                        }
+                    };
+                }
 
-                return {
-                    type: 'ExpressionStatement',
-                    expression
-                };
+                if (nextToken?.value === '(') {
+                    current--;
+                    const expression = parseExpression();
+                    consume(); // consume ';'
+                    return {
+                        type: 'ExpressionStatement',
+                        expression
+                    };
+                }
+
+                throw new Error(`Unexpected token after identifier: ${nextToken?.value}`);
             }
 
-            return null;
+            throw new Error(`Unexpected token: ${token.value}`);
         };
 
         const statements = [];
@@ -421,7 +450,7 @@ class BekaScriptInterpreter {
             case 'CallExpression':
                 if (this.functions[node.name]) {
                     const func = this.functions[node.name];
-                    const newScope = { ...scope };
+                    const newScope = { ...this.variables };
 
                     for (let i = 0; i < func.params.length; i++) {
                         newScope[func.params[i]] = this.evaluate(node.arguments[i], scope);
@@ -430,11 +459,25 @@ class BekaScriptInterpreter {
                     let result = null;
                     for (const stmt of func.body) {
                         result = this.execute(stmt, newScope);
+                        if (result?.type === 'return') {
+                            return result.value;
+                        }
                     }
-
                     return result;
                 }
                 break;
+
+            case 'UnaryExpression':
+                if (node.operator === '++') {
+                    if (typeof scope[node.argument.name] !== 'number') {
+                        throw new Error(`Operand for '++' must be a number.`);
+                    }
+                    const oldValue = scope[node.argument.name];
+                    scope[node.argument.name]++;
+                    return oldValue;
+                } else {
+                    throw new Error(`Unknown unary operator: ${node.operator}`);
+                }
 
             default:
                 return null;
@@ -451,6 +494,9 @@ class BekaScriptInterpreter {
                 break;
 
             case 'AssignmentStatement':
+                if (scope[statement.name] === undefined) {
+                    throw new Error(`Variable '${statement.name}' not declared.`);
+                }
                 scope[statement.name] = this.evaluate(statement.value, scope);
                 break;
 
@@ -490,7 +536,6 @@ class BekaScriptInterpreter {
                 const start = this.evaluate(statement.start, scope);
                 const end = this.evaluate(statement.end, scope);
 
-                // Perbaiki logika for loop untuk memungkinkan hitungan mundur
                 if (start < end) {
                     for (let i = start; i < end; i++) {
                         const loopScope = { ...scope, [statement.variable]: i };
@@ -524,7 +569,14 @@ class BekaScriptInterpreter {
                 break;
 
             case 'ExpressionStatement':
-                return this.evaluate(statement.expression, scope);
+                this.evaluate(statement.expression, scope);
+                break;
+
+            case 'ReturnStatement':
+                return {
+                    type: 'return',
+                    value: this.evaluate(statement.value, scope)
+                };
 
             case 'UnaryExpression':
                 if (statement.operator === '++') {
@@ -546,7 +598,10 @@ class BekaScriptInterpreter {
             const ast = this.parse(tokens);
 
             for (const statement of ast) {
-                this.execute(statement);
+                const result = this.execute(statement);
+                if (result?.type === 'return') {
+                    // ignore
+                }
             }
         } catch (error) {
             console.error('BekaScript Error:', error.message);
