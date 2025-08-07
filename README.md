@@ -6,8 +6,8 @@ BekaScript adalah bahasa pemrograman yang dirancang dengan nuansa lokal Bekasi d
 
 ## Daftar Isi
 
-* [Pengenalan](#📝-apa-itu-bekascript)
-* [Instalasi](#🚀-cara-instalasi)
+* [Pengenalan](#apa-itu-bekascript)
+* [Instalasi](#cara-instalasi)
 * [Menjalankan Kode](#▶%ef%b8%8f-cara-menjalankan-program-bekascript)
 * [Sintaks Dasar dan Contoh](#sintaks-dasar-dan-contoh)
 
