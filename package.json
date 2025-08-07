@@ -1,6 +1,6 @@
 {
   "name": "bekascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BekaScript - Bahasa pemrograman dengan flavor Betawi-Bekasi.",
   "main": "src/interpreter.js",
   "bin": {
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/taruna/bekascript.git"
+    "url": "https://github.com/tarunawahyudi/bekascript.git"
   },
   "bugs": {
     "url": "https://github.com/tarunawahyudi/bekascript/issues"
