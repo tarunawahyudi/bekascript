@@ -1,5 +1,5 @@
 {
-  "name": "bekascript-cli",
+  "name": "bekascript",
   "version": "1.0.0",
   "description": "BekaScript - Bahasa pemrograman dengan flavor Betawi-Bekasi.",
   "main": "src/interpreter.js",
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akun-github/bekascript-cli.git"
+    "url": "https://github.com/taruna/bekascript.git"
   },
   "bugs": {
-    "url": "https://github.com/akun-github/bekascript-cli/issues"
+    "url": "https://github.com/tarunawahyudi/bekascript/issues"
   },
-  "homepage": "https://github.com/akun-github/bekascript-cli#readme",
+  "homepage": "https://github.com/tarunawahyudi/bekascript#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
