@@ -5,22 +5,22 @@
 <p align="center">
   <!-- NPM Version -->
   <a href="https://www.npmjs.com/package/bekascript" target="_blank">
-    <img src="https://img.shields.io/npm/v/bekascript?style=for-the-badge&logo=npm&color=CB3837" alt="NPM Version" />
+    <img src="https://img.shields.io/npm/v/bekascript?style=flat&logo=npm&color=CB3837" alt="NPM Version" />
   </a>
 
   <!-- NPM Downloads -->
   <a href="https://www.npmjs.com/package/bekascript" target="_blank">
-    <img src="https://img.shields.io/npm/dt/bekascript?style=for-the-badge&logo=npm&color=CB3837" alt="NPM Downloads" />
+    <img src="https://img.shields.io/npm/dt/bekascript?style=flat&logo=npm&color=CB3837" alt="NPM Downloads" />
   </a>
 
   <!-- VS Code Extension Version -->
   <a href="https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript" target="_blank">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/tarunawahyudi.bekascript?style=for-the-badge&logo=visual-studio-code&color=007ACC" alt="VS Code Extension Version" />
+    <img src="https://img.shields.io/visual-studio-marketplace/v/tarunawahyudi.bekascript?style=flat&logo=visual-studio-code&color=007ACC" alt="VS Code Extension Version" />
   </a>
 
   <!-- License -->
   <a href="https://github.com/tarunawahyudi/bekascript/blob/main/LICENSE" target="_blank">
-    <img src="https://img.shields.io/github/license/tarunawahyudi/bekascript?style=for-the-badge&color=007ACC" alt="License" />
+    <img src="https://img.shields.io/github/license/tarunawahyudi/bekascript?style=flat&color=007ACC" alt="License" />
   </a>
 </p>
 
