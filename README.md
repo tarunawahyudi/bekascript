@@ -59,7 +59,9 @@ Untuk pengalaman ngoding yang lebih nyaman, kamu bisa install ekstensi VS Code B
 -   **Auto-completion:** Membantu kamu menulis kode lebih cepat.
 -   **Snippets:** Menawarkan cuplikan kode yang sering digunakan.
 
-Silakan cari di [VS Code Marketplace: **BekaScript**](https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript)
+<a href="https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript" target="_blank" rel="noopener noreferrer">
+  VS Code Marketplace: <strong>BekaScript</strong>
+</a>
 
 ---
 
