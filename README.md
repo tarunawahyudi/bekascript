@@ -1,28 +1,15 @@
+![BekaScript Banner](./assets/banner.png)
+
 # BekaScript
 
 > Bahasa pemrograman bercita rasa Betawi-Bekasi - bagen biar kata kaga danta ge, yang penting belajar ngoding jadi **gampang** dan **gurih** bray
 
-<p align="center">
-  <!-- NPM Version -->
-  <a href="https://www.npmjs.com/package/bekascript" target="_blank">
-    <img src="https://img.shields.io/npm/v/bekascript?style=flat&logo=npm&color=CB3837" alt="NPM Version" />
-  </a>
 
-  <!-- NPM Downloads -->
-  <a href="https://www.npmjs.com/package/bekascript" target="_blank">
-    <img src="https://img.shields.io/npm/dt/bekascript?style=flat&logo=npm&color=CB3837" alt="NPM Downloads" />
-  </a>
+[![NPM Version](https://img.shields.io/npm/v/bekascript?style=flat&logo=npm&color=CB3837)](https://www.npmjs.com/package/bekascript)
+[![NPM Downloads](https://img.shields.io/npm/dt/bekascript?style=flat&logo=npm&color=CB3837)](https://www.npmjs.com/package/bekascript)
+[![VS Code Extension Version](https://img.shields.io/visual-studio-marketplace/v/tarunawahyudi.bekascript?style=flat&logo=visual-studio-code&color=007ACC)](https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript)
+[![License](https://img.shields.io/github/license/tarunawahyudi/bekascript?style=flat&color=007ACC)](https://github.com/tarunawahyudi/bekascript/blob/main/LICENSE)
 
-  <!-- VS Code Extension Version -->
-  <a href="https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript" target="_blank">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/tarunawahyudi.bekascript?style=flat&logo=visual-studio-code&color=007ACC" alt="VS Code Extension Version" />
-  </a>
-
-  <!-- License -->
-  <a href="https://github.com/tarunawahyudi/bekascript/blob/main/LICENSE" target="_blank">
-    <img src="https://img.shields.io/github/license/tarunawahyudi/bekascript?style=flat&color=007ACC" alt="License" />
-  </a>
-</p>
 
 ## Daftar Isi
 
