@@ -1,28 +1,48 @@
 # BekaScript
 
-> Bahasa pemrograman bercita rasa Betawi-Bekasi — bikin ngoding jadi lebih **fun**, **lokal**, dan **ngakak!**
+> Bahasa pemrograman bercita rasa Betawi-Bekasi - bagen biar kata kaga danta ge, yang penting belajar ngoding jadi **gampang** dan **gurih** bray
 
-BekaScript adalah bahasa pemrograman yang dirancang dengan nuansa lokal Bekasi dan menggunakan kosakata khas Betawi Bekasi. Tujuannya adalah untuk membuat belajar pemrograman menjadi lebih menyenangkan, mudah dipahami, dan dekat dengan budaya lokal, terutama bagi siswa atau pemula.
+<p align="center">
+  <!-- NPM Version -->
+  <a href="https://www.npmjs.com/package/bekascript" target="_blank">
+    <img src="https://img.shields.io/npm/v/bekascript?style=for-the-badge&logo=npm&color=CB3837" alt="NPM Version" />
+  </a>
+
+  <!-- NPM Downloads -->
+  <a href="https://www.npmjs.com/package/bekascript" target="_blank">
+    <img src="https://img.shields.io/npm/dt/bekascript?style=for-the-badge&logo=npm&color=CB3837" alt="NPM Downloads" />
+  </a>
+
+  <!-- VS Code Extension Version -->
+  <a href="https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript" target="_blank">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/tarunawahyudi.bekascript?style=for-the-badge&logo=visual-studio-code&color=007ACC" alt="VS Code Extension Version" />
+  </a>
+
+  <!-- License -->
+  <a href="https://github.com/tarunawahyudi/bekascript/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/github/license/tarunawahyudi/bekascript?style=for-the-badge&color=007ACC" alt="License" />
+  </a>
+</p>
 
 ## Daftar Isi
 
-* [Pengenalan](#apa-itu-bekascript)
-* [Instalasi](#cara-instalasi)
-* [Menjalankan Kode](#▶%ef%b8%8f-cara-menjalankan-program-bekascript)
-* [Sintaks Dasar dan Contoh](#sintaks-dasar-dan-contoh)
-
-  * [Bikin Variabel](#1-bikin-variabel)
-  * [Nampilin ke Layar (Print)](#2-nampilin-ke-layar-print)
-  * [Kondisional (If Else)](#3-kondisional-if-else)
-  * [Perulangan (For Loop)](#4-perulangan-for-loop)
-  * [Perulangan (While Loop)](#5-perulangan-while-loop)
-  * [Fungsi (Function)](#6-fungsi-function)
-  * [Komentar](#7-komentar)
-* [Fitur Bahasa](#🧠-fitur-bahasa)
-* [Kenapa BekaScript?](#✨-kenapa-bekascript)
-* [Kontribusi](#🌟-kontribusi)
-* [Lisensi](#📦-lisensi)
-* [Dibuat oleh](#dibuat-oleh)
+* [📝 Apa Itu BekaScript?](#-apa-itu-bekascript)
+* [🚀 Cara Instalasi](#-cara-instalasi)
+* [▶️ Cara Menjalankan Program BekaScript](#️-cara-menjalankan-program-bekascript)
+* [🧑‍💻 Sintaks Dasar dan Contoh](#-sintaks-dasar-dan-contoh)
+  * [1. Bikin Variabel](#1-bikin-variabel)
+  * [2. Nampilin ke Layar (Print)](#2-nampilin-ke-layar-print)
+  * [3. Kondisional (If Else)](#3-kondisional-if-else)
+  * [4. Perulangan (For Loop)](#4-perulangan-for-loop)
+  * [5. Perulangan (While Loop)](#5-perulangan-while-loop)
+  * [6. Fungsi (Function)](#6-fungsi-function)
+  * [7. Komentar](#7-komentar)
+* [🧠 Fitur Bahasa](#-fitur-bahasa)
+* [✨ Kenapa BekaScript?](#-kenapa-bekascript)
+* [🔌 Instalasi VS Code Extension](#-instalasi-vs-code-extension)
+* [🌟 Kontribusi](#-kontribusi)
+* [📦 Lisensi](#-lisensi)
+* [👨‍💻 Dibuat oleh](#-dibuat-oleh)
 
 ---
 
@@ -34,7 +54,9 @@ BekaScript adalah bahasa pemrograman yang dirancang dengan nuansa lokal Bekasi d
 
 ## 🚀 Cara Instalasi
 
-Pastikan kamu sudah menginstal **Node.js** versi terbaru.
+Pastikan kamu sudah menginstal **Node.js** versi terbaru di komputermu.
+
+Setelah itu, buka terminal atau Command Prompt dan jalankan perintah ini:
 
 ```bash
 npm install -g bekascript
@@ -42,9 +64,24 @@ npm install -g bekascript
 
 ---
 
+## 🔌 Instalasi VS Code Extension
+
+Untuk pengalaman ngoding yang lebih nyaman, kamu bisa install ekstensi VS Code BekaScript. Ekstensi ini menyediakan:
+
+-   **Syntax Highlighting:** Agar kode BekaScript-mu berwarna-warni dan mudah dibaca.
+-   **Auto-completion:** Membantu kamu menulis kode lebih cepat.
+-   **Snippets:** Menawarkan cuplikan kode yang sering digunakan.
+
+Silakan cari di [VS Code Marketplace: **BekaScript**](https://marketplace.visualstudio.com/items?itemName=tarunawahyudi.bekascript)
+
+---
+
 ## ▶️ Cara Menjalankan Program BekaScript
 
-Buat file dengan ekstensi `.bks`, misalnya `program.bks`, lalu jalankan menggunakan perintah:
+1. Buat file baru dengan ekstensi `.bks`, contohnya `program.bks`.
+2. Tulis kode BekaScript-mu di dalam file tersebut.
+3. Buka terminal di direktori yang sama dengan file-mu.
+4. Jalankan program menggunakan perintah:
 
 ```bash
 bks program.bks
@@ -52,18 +89,22 @@ bks program.bks
 
 ---
 
-## Sintaks Dasar dan Contoh
+## 🧑‍💻 Sintaks Dasar dan Contoh
 
 ### 1. Bikin Variabel
 
-```bks
-punya umur = 25;
-punya nama = "Yudi";
+Gunakan `punya` untuk konstanta dan `anu` untuk variabel yang bisa diubah.
+
+```js
+punya umur = 25; // Konstanta (tidak bisa diubah)
+anu nama = "Yudi"; // Variabel (bisa diubah)
 ```
 
 ### 2. Nampilin ke Layar (Print)
 
-```bks
+Gunakan `nongol` untuk menampilkan pesan ke konsol.
+
+```js
 nongol "Halo bray!";
 
 punya nama = "yudi";
@@ -72,7 +113,9 @@ nongol "nama guah " + nama;
 
 ### 3. Kondisional (If Else)
 
-```bks
+Gunakan `kalo`, `yakali`, dan `kalo_kaga`.
+
+```js
 punya umur = 30;
 
 kalo (umur < 2) {
@@ -86,7 +129,9 @@ kalo (umur < 2) {
 
 ### 4. Perulangan (For Loop)
 
-```bks
+Gunakan `ulangin` untuk perulangan dengan jumlah yang sudah ditentukan.
+
+```js
 ulangin i dari 0 ampe 5 {
   nongol "coba dah ini mah " + i;
 }
@@ -94,18 +139,22 @@ ulangin i dari 0 ampe 5 {
 
 ### 5. Perulangan (While Loop)
 
-```bks
+Gunakan `pokonya` untuk perulangan selama kondisi terpenuhi.
+
+```js
 anu counter = 1;
 nongol "Bilangan genap dari 2-10:";
 pokonya (counter <= 5) {
-    nongol counter * 2;
-    counter++;
+  nongol counter * 2;
+  counter++;
 }
 ```
 
 ### 6. Fungsi (Function)
 
-```bks
+Gunakan `guna` untuk membuat fungsi. `balik` digunakan untuk mengembalikan nilai.
+
+```js
 guna sapa(nama) {
   nongol "eh mau kemana pegih si, ngopi apa mari " + nama;
 }
@@ -115,7 +164,9 @@ sapa("Bang Madun");
 
 ### 7. Komentar
 
-```bks
+Gunakan `//` untuk komentar satu baris, seperti bahasa C++.
+
+```js
 // Ini komentar kaga di jalanin woles bae
 ```
 
@@ -123,49 +174,83 @@ sapa("Bang Madun");
 
 ## 🧠 Fitur Bahasa
 
-| Sintaks     | JavaScript      | Contoh                            |
-| ----------- | --------------- | --------------------------------- |
-| `punya`     | `const`         | `punya nama = "Ujang";`           |
-| `anu`       | `let`           | `anu umur = 17;`                  |
-| `nongol`    | `console.log()` | `nongol "Halo dunia!";`           |
-| `kalo`      | `if`            | `kalo (umur > 17) {...}`          |
-| `yakali`    | `else if`       | `yakali (umur > 10) {...}`        |
-| `kalo_kaga` | `else`          | `kalo_kaga { ... }`               |
-| `ulangin`   | `for` loop      | `ulangin i dari 0 ampe 5 { ... }` |
-| `pokonya`   | `while` loop    | `pokonya (a < 5) { ... }`         |
-| `guna`      | `function`      | `guna sapa(nama) { ... }`         |
-| `balik`     | `return`        | `balik hasil;`                    |
-
----
-
-## ✨ Kenapa BekaScript?
-
-* 🧠 Bahasa yang **dekat secara budaya** untuk pemula
-* 📚 Cocok untuk **pengajaran dasar programming**
-* 🎉 Sintaks yang **nyeleneh tapi bermakna** dan mudah diingat
-* ⚡ Dibuat dengan Node.js dan bisa dijalankan via CLI
+| Sintaks     | Deskripsi                               | Contoh                                  |
+| ----------- | --------------------------------------- | --------------------------------------- |
+| `punya`     | Konstanta (mirip `const` di JS)         | `punya nama = "Ujang";`                 |
+| `anu`       | Variabel (mirip `let` di JS)            | `anu umur = 17;`                        |
+| `nongol`    | Mencetak ke konsol (mirip `console.log`)  | `nongol "Halo dunia!";`                 |
+| `kalo`      | Kondisional (`if`)                      | `kalo (umur > 17) {...}`                |
+| `yakali`    | Kondisional (`else if`)                 | `yakali (umur > 10) {...}`              |
+| `kalo_kaga` | Kondisional (`else`)                    | `kalo_kaga { ... }`                     |
+| `ulangin`   | Perulangan (`for`)                      | `ulangin i dari 0 ampe 5 { ... }`       |
+| `pokonya`   | Perulangan (`while`)                    | `pokonya (a < 5) { ... }`               |
+| `guna`      | Fungsi (`function`)                     | `guna sapa(nama) { ... }`               |
+| `balik`     | Mengembalikan nilai (`return`)          | `balik hasil;`                          |
 
 ---
 
 ## 🌟 Kontribusi
 
-Punya ide tambahan syntax? Atau nemu bug lucu? Pull request dan issue boleh bae dah!
+Punya ide untuk sintaks baru? Menemukan bug? Atau ingin menambahkan fitur keren? Kontribusi sangat diharapkan!
+
+Berikut langkah-langkah kontribusi yang direkomendasikan:
+
+1. **Buka Issue terlebih dahulu**
+   - Gunakan tab [Issues](https://github.com/tarunawahyudi/bekascript/issues) untuk menyampaikan ide, bug, atau usulan fitur.
+   - Jelaskan secara jelas dan ringkas, sertakan contoh jika perlu.
+
+2. **Fork repositori ini**
+   - Klik tombol **Fork** di pojok kanan atas, lalu clone hasil fork ke lokal:
+     ```bash
+     git clone https://github.com/username-anda/bekascript.git
+     ```
+
+3. **Buat branch baru**
+   - Gunakan nama yang deskriptif untuk branch kamu:
+     ```bash
+     git checkout -b fitur/sintaks-baru
+     ```
+
+4. **Lakukan perubahan**
+   - Pastikan kode kamu bersih, terdokumentasi, dan mengikuti struktur yang ada.
+   - Tambahkan tes jika memungkinkan.
+
+5. **Commit perubahan**
+   - Gunakan pesan commit yang jelas:
+     ```bash
+     git commit -m "feat: menambahkan sintaks baru untuk perulangan"
+     ```
+
+6. **Push ke GitHub**
+   ```bash
+   git push origin fitur/sintaks-baru
+   ```
+
+7. **Buat Pull Request**
+   - Kembali ke repositori asal, dan buka **Pull Request** dari branch yang kamu buat.
+
+---
+
+### 💡 Tips Tambahan
+- Pastikan kode kamu lolos pengecekan (`lint`, format, dsb.).
+- Jika perubahanmu besar, diskusikan dulu lewat Issue sebelum memulai.
+- Gunakan gaya penulisan kode yang konsisten dengan proyek ini.
 
 ---
 
 ## 📦 Lisensi
 
-MIT License
+Proyek ini dilisensikan di bawah **MIT License**.
 
 ---
 
-## Dibuat oleh
+## 👨‍💻 Dibuat oleh
 
-Taruna Wahyudi
-[GitHub](https://github.com/tarunawahyudi) · [LinkedIn](https://www.linkedin.com/in/taruna-wahyudi-228382175/) · [Email](wahyuditaruna97@gmail.com)
+**Taruna Wahyudi**
+[GitHub](https://github.com/tarunawahyudi) · [LinkedIn](https://www.linkedin.com/in/taruna-wahyudi-228382175/) · [Email](mailto:wahyuditaruna97@gmail.com)
 
 ---
 
 Terima kasih udah nyobain **BekaScript!** ❤️
 
-> "Ngoding mah jangan terlalu serius, yang penting nyambung dan ketawa!"
+> "Ngoding mah ora pusing, yang pusing mah bayar cicilan abis nerima gajian, ekekekeke"
