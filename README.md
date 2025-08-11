@@ -13,23 +13,23 @@
 
 ## Daftar Isi
 
-* [📝 Apa Itu BekaScript?](#-apa-itu-bekascript)
-* [🚀 Cara Instalasi](#-cara-instalasi)
-* [▶️ Cara Menjalankan Program BekaScript](#️-cara-menjalankan-program-bekascript)
-* [🧑‍💻 Sintaks Dasar dan Contoh](#-sintaks-dasar-dan-contoh)
-  * [1. Bikin Variabel](#1-bikin-variabel)
-  * [2. Nampilin ke Layar (Print)](#2-nampilin-ke-layar-print)
-  * [3. Kondisional (If Else)](#3-kondisional-if-else)
-  * [4. Perulangan (For Loop)](#4-perulangan-for-loop)
-  * [5. Perulangan (While Loop)](#5-perulangan-while-loop)
-  * [6. Fungsi (Function)](#6-fungsi-function)
-  * [7. Komentar](#7-komentar)
-* [🧠 Fitur Bahasa](#-fitur-bahasa)
-* [✨ Kenapa BekaScript?](#-kenapa-bekascript)
-* [🔌 Instalasi VS Code Extension](#-instalasi-vs-code-extension)
-* [🌟 Kontribusi](#-kontribusi)
-* [📦 Lisensi](#-lisensi)
-* [👨‍💻 Dibuat oleh](#-dibuat-oleh)
+- [BekaScript](#bekascript)
+  - [Daftar Isi](#daftar-isi)
+  - [📝 Apa Itu BekaScript?](#-apa-itu-bekascript)
+  - [🚀 Cara Instalasi](#-cara-instalasi)
+  - [🔌 Instalasi VS Code Extension](#-instalasi-vs-code-extension)
+  - [▶️ Cara Menjalankan Program BekaScript](#️-cara-menjalankan-program-bekascript)
+  - [🧑‍💻 Sintaks Dasar dan Contoh](#-sintaks-dasar-dan-contoh)
+    - [1. Bikin Variabel](#1-bikin-variabel)
+    - [2. Nampilin ke Layar (Print)](#2-nampilin-ke-layar-print)
+    - [3. Kondisional (If Else)](#3-kondisional-if-else)
+    - [4. Perulangan (For Loop)](#4-perulangan-for-loop)
+    - [5. Perulangan (While Loop)](#5-perulangan-while-loop)
+    - [6. Fungsi (Function)](#6-fungsi-function)
+    - [7. Komentar](#7-komentar)
+  - [🧠 Fitur Bahasa](#-fitur-bahasa)
+  - [📦 Lisensi](#-lisensi)
+  - [👨‍💻 Dibuat oleh](#-dibuat-oleh)
 
 ---
 
@@ -175,55 +175,6 @@ Gunakan `//` untuk komentar satu baris, seperti bahasa C++.
 | `pokonya`   | Perulangan (`while`)                    | `pokonya (a < 5) { ... }`               |
 | `guna`      | Fungsi (`function`)                     | `guna sapa(nama) { ... }`               |
 | `balik`     | Mengembalikan nilai (`return`)          | `balik hasil;`                          |
-
----
-
-## 🌟 Kontribusi
-
-Punya ide untuk sintaks baru? Menemukan bug? Atau ingin menambahkan fitur keren? Kontribusi sangat diharapkan!
-
-Berikut langkah-langkah kontribusi yang direkomendasikan:
-
-1. **Buka Issue terlebih dahulu**
-   - Gunakan tab [Issues](https://github.com/tarunawahyudi/bekascript/issues) untuk menyampaikan ide, bug, atau usulan fitur.
-   - Jelaskan secara jelas dan ringkas, sertakan contoh jika perlu.
-
-2. **Fork repositori ini**
-   - Klik tombol **Fork** di pojok kanan atas, lalu clone hasil fork ke lokal:
-     ```bash
-     git clone https://github.com/username-anda/bekascript.git
-     ```
-
-3. **Buat branch baru**
-   - Gunakan nama yang deskriptif untuk branch kamu:
-     ```bash
-     git checkout -b fitur/sintaks-baru
-     ```
-
-4. **Lakukan perubahan**
-   - Pastikan kode kamu bersih, terdokumentasi, dan mengikuti struktur yang ada.
-   - Tambahkan tes jika memungkinkan.
-
-5. **Commit perubahan**
-   - Gunakan pesan commit yang jelas:
-     ```bash
-     git commit -m "feat: menambahkan sintaks baru untuk perulangan"
-     ```
-
-6. **Push ke GitHub**
-   ```bash
-   git push origin fitur/sintaks-baru
-   ```
-
-7. **Buat Pull Request**
-   - Kembali ke repositori asal, dan buka **Pull Request** dari branch yang kamu buat.
-
----
-
-### 💡 Tips Tambahan
-- Pastikan kode kamu lolos pengecekan (`lint`, format, dsb.).
-- Jika perubahanmu besar, diskusikan dulu lewat Issue sebelum memulai.
-- Gunakan gaya penulisan kode yang konsisten dengan proyek ini.
 
 ---
 
