@@ -1,6 +1,6 @@
 {
   "name": "bekascript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "BekaScript - Bahasa pemrograman dengan flavor Betawi-Bekasi.",
   "main": "src/interpreter.js",
   "bin": {
